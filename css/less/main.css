@@ -1,0 +1,313 @@
+.navbar-inverse {
+  background-color: #0071bc;
+}
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  background-color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #0071bc;
+}
+.dropdown-menu {
+  background-color: #ffffff;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: #428bca;
+}
+.navbar-inverse {
+  background-image: none;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-image: none;
+}
+.navbar-inverse {
+  border-color: #3a91cb;
+}
+.navbar-inverse .navbar-brand {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-brand:hover {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #0071bc;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #ffffff;
+}
+.dropdown-menu > li > a {
+  color: #0071bc;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .dropdown > a .caret {
+  border-top-color: #999999;
+}
+.navbar-inverse .navbar-nav > .dropdown > a:hover .caret {
+  border-top-color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .dropdown > a .caret {
+  border-bottom-color: #999999;
+}
+.navbar-inverse .navbar-nav > .dropdown > a:hover .caret {
+  border-bottom-color: #ffffff;
+}
+.white {
+  background-color: #f8f8f8;
+}
+.blue {
+  color: #3a91cb;
+}
+.org {
+  color: #f39c12;
+}
+.width50 {
+  height: 100px;
+  border: 1px dashed #dddddd;
+}
+.dash {
+  margin-top: 20px;
+}
+.top10 {
+  margin-top: 10px;
+}
+.top20 {
+  margin-top: 20px;
+}
+.top30 {
+  margin-top: 30px;
+}
+.left15 {
+  margin-left: 15px;
+}
+.padleft30 {
+  padding-left: 30px;
+}
+.padleft45 {
+  padding-left: 45px;
+}
+.padright45 {
+  padding-right: 45px;
+}
+.txt10 {
+  font-size: 10px;
+}
+.txt12 {
+  font-size: 12px;
+}
+.txt18 {
+  font-size: 18px;
+}
+.bkGrey1 {
+  background-color: white;
+}
+.sec {
+  margin-top: 20px;
+}
+.sm-sec {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.sm-sec:nth-child(1n) {
+  margin-top: 0px;
+}
+.full {
+  width: 100%;
+}
+.blue {
+  color: #3a91cb;
+}
+.grey {
+  color: #666666;
+}
+.dash-icons i {
+  margin-right: 10px;
+  color: #666666;
+  font-size: 16px;
+}
+.contentBtm {
+  width: 100%;
+  border-top: 1px solid #dddddd;
+}
+.careCards {
+  padding: 5px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  max-width: 500px;
+  height: 150px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#pageTop {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: -10px;
+  background: #301a1a;
+  /* Old browsers */
+
+  background: -moz-linear-gradient(top, #301a1a 0%, #6c8199 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #301a1a), color-stop(100%, #6c8199));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #301a1a 0%, #6c8199 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, #301a1a 0%, #6c8199 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, #301a1a 0%, #6c8199 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #301a1a 0%, #6c8199 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#301a1a', endColorstr='#6c8199', GradientType=0);
+  /* IE6-9 */
+
+}
+.topRow {
+  background-color: #666666;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 140px;
+}
+.careTop {
+  margin-bottom: 20px;
+}
+#droparea {
+  border: 3px solid green;
+  min-width: 300px;
+  min-height: 100px;
+  font-size: 18px;
+  text-align: center;
+}
+.over {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  border-radius: 4px;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1.0s;
+  -moz-animation-duration: 1.0s;
+  animation-duration: 1.0s;
+}
+#accordian {
+  background: #004050;
+  width: 250px;
+  margin: 100px auto 0 auto;
+  color: white;
+  /*Some cool shadow and glow effect*/
+
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.6), 0 0 200px 1px rgba(255, 255, 255, 0.5);
+}
+/*heading styles*/
+#accordian h3 {
+  font-size: 12px;
+  line-height: 34px;
+  padding: 0 10px;
+  cursor: pointer;
+  /*fallback for browsers not supporting gradients*/
+
+  background: #003040;
+  background: linear-gradient(#003040, #002535);
+}
+/*heading hover effect*/
+#accordian h3:hover {
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+}
+/*iconfont styles*/
+#accordian h3 span {
+  font-size: 16px;
+  margin-right: 10px;
+}
+/*list items*/
+#accordian li {
+  list-style-type: none;
+}
+/*links*/#accordian ul ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  line-height: 27px;
+  display: block;
+  padding: 0 15px;
+  /*transition for smooth hover animation*/
+
+  transition: all 0.15s;
+}
+/*hover effect on links*/
+#accordian ul ul li a:hover {
+  background: #003545;
+  border-left: 5px solid lightgreen;
+}
+/*Lets hide the non active LIs by default*/
+#accordian ul ul {
+  display: none;
+}
+#accordian li.active ul {
+  display: block;
+}

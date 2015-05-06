@@ -1,0 +1,2291 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SurvivorPlan</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Add custom CSS here -->
+    <style>
+    body {
+        margin-top: 60px;
+    }
+    </style>
+
+</head>
+
+<body class="white">
+
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+      <div class="container1">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="./" class="navbar-brand">SurvivorPlan</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#"><i class="fa fa-users"></i> Patients</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-calendar"></i> Calendar</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href=""><i class="fa fa-user"></i> Sue Wilson, RN, CPON </a>
+                </li>
+            </ul>
+        </nav>
+      </div>
+    </header>
+            
+
+              <div class="row txt12 topRow fade-in" id="pageTop">
+               <div class="col-xs-3 careCards">
+                  
+                  <img src="img/girl2.jpg" width="72px" height="72px" class="img-thumbnail pull-left">
+                  <span class="pull-left left15"><i class="fa fa-user blue"></i><u> Patient Info</u></span>
+                  <ul class="list-unstyled left15 pull-left">
+                    <li>Lynn Fields</li>
+                    <li>Patient ID/MRN: 986656</li>
+                    <li>12 yrs old (11/05/2002)</li>
+                  </ul>
+                </div>
+                <div class="col-xs-3 careCards">
+                  <span> <i class="fa fa-stethoscope blue"></i><u> Key Diagnosis Info </u> </span>
+                    <ul class="list-unstyled">
+                      <li> <strong>Diagnosis:</strong> Acute Lymphoblastic Leukemia </li>
+                      <li> <strong>Diagnosis Date:</strong> 10/01/2011</li>
+                      <li> Age at Diagnosis: 8 years </li>
+                    </ul>
+                </div>
+                <div class="col-xs-3 careCards">
+                  <span><i class="fa fa-clipboard blue"></i> <u>Key Treatment Info</u> </span>
+                    <ul class="list-unstyled">
+                      <li><strong>Chemotherapy Regimen:</strong> AALL0232, DH</li>
+		      <li><strong>Cumulative Doses:</strong> Cyclophosphamide (4GM/M2), Doxorubicin (250mg/M2), Daunorubicin (250mg/M2), Methotrexate High-Dose IV (20GM/M2)
+                      <li><strong>Surgical Events:</strong> Central Veneous Catheter Port Placement, Laparotomy, Central Venous Catheter Port Removal </li>
+		      <li><strong>Radiation:</strong> N/A, <strong>Cranial, External Beam, 18.00Gy</strong></li>
+		      
+                    </ul>
+                </div>
+                <div class="col-xs-3 careCards">
+                  <span><i class="fa fa-flag blue"></i><u>Significant Treatment Effects/Concerns </u> </span>
+                    <ul class="list-unstyled">
+                      <li> Endocrine: Central Hypogonadism</li>
+                      <li> Endocrine: Hypothyroidism</li>
+                      <li> Musculoskeletal: Oseopenia </li>
+		      <li> Neurologic: ADHD </li>
+		      <li> Neurologic: Peripheral Neuropathy </li>
+		      <li> Ocular: Cataracts </li>
+		      <li> Oral: Abnormal Dental Development </li>
+		      <li> Skin: Permanent Alopecia & Hyperpigmentation </li>
+		      
+                    </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 padleft45 top20 padright45">
+                  <!-- Hidden 
+                  <a class="btn btn-default btn-xs pull-right" href="#" id="showPatient">Hide Patient info</a>
+                  -->
+                  <a href="#"> Dashboard</a> > <a href="#">Follow-up Care</a><br><br><br>
+                  <span class="txt18"> Follow-Up Care Plan Builder </span><br>
+                  
+                </div>
+              </div>
+              <div class="row top20">
+                <div class="col-lg-4 padleft45 whitebk">
+                  <div class="dragNdropSection txt12">
+                    <div class="btm20">
+                      <span class="txt14"><i class="fa fa-cube"></i> Building Blocks </span>
+                      <span class="txt14 info pull-right top3"><i class="fa fa-star"></i> Recommended for This Plan</span>
+                    </div>
+                    <br>
+                    <!-- Main accordion -->
+                    <div class="panel-group" id="primary">
+                    <!-- This Section contains nested items -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <p class="panel-title"><a class="panel-toggle" data-toggle="collapse" data-parent="#primary" href="#collapseTwo">
+                          + Primary Cancer Follow-Up
+                        </a></p>
+                      </div>
+                      <div id="collapseTwo" class="panel-body collapse">
+                        <div class="panel-inner">
+
+                          <!-- Here we insert another nested accordion -->
+
+                          <div class="panel-group" id="accordion2">
+                            <div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Survivorship Follow-Up Visit
+                                </h4>
+                              </div>
+                            </div>
+
+			 <!--
+ 			    <div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Post-Treatment Mammogram
+                                </h4>
+                              </div>
+                            </div>
+                            <div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Other (Primary Cancer Follow-Up)
+                                </h4>
+                              </div>
+                            </div>
+			-->
+
+                            
+                          </div>
+
+                          <!-- Inner accordion ends here -->
+
+                        </div>
+                      </div><!-- Panel body -->
+                    </div><!-- Panel -->
+                  </div><!-- Accordion -->
+
+                  <!-- Persistent accordion -->
+                    <div class="panel-group" id="persistent1">
+                    <!-- This Section contains nested items -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-toggle" data-toggle="collapse" data-parent="#persistent1" href="#persistent2">
+                          + Persistent Treatment Effects
+                        </a></h4>
+                      </div>
+                      <div id="persistent2" class="panel-body collapse">
+                        <div class="panel-inner">
+
+                          <!-- Here we insert another nested accordion -->
+
+                          <div class="panel-group" id="accordion4">
+                            <div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Endocrine: Central Hypogonadism
+                                </h4>
+                              </div>
+                            </div>
+
+
+			   <div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Endocrine: Hypothyroidism
+                                </h4>
+                              </div>
+                            </div>
+
+			  <div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Musculoskeletal: Osteopenia
+                                </h4>
+                              </div>
+                            </div>
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Neurologic: ADHD
+                                </h4>
+                              </div>
+                            </div>
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Neurologic: Peripheral Neuropathy
+                                </h4>
+                              </div>
+                            </div>
+
+                            <div class="panel panel-default node" draggable="true">
+                              <div class="panel-heading">
+                                <h4 class="panel-title"><a class="panel-toggle" data-toggle="collapse" data-parent="#persistent1" href="#collapseInnerOne">
+                                  <i class="fa fa-star info"></i> Ocular: Cataracts
+                                </a></h4>
+                              </div>
+                            </div>
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Oral: Abnormal Dental Development
+                                </h4>
+                              </div>
+                            </div>
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i>Skin: Permanent Alopecia & Hyperpigmentation
+                                </h4>
+                              </div>
+                            </div>
+                            
+                          </div>
+
+                          <!-- Inner accordion ends here -->
+
+                        </div>
+                      </div><!-- Panel body -->
+                    </div><!-- Panel -->
+                  </div><!-- Accordion -->
+
+                  <!--  Possible Late Effects of Treatment accordion -->
+                    <div class="panel-group" id="late1">
+                    <!-- This Section contains nested items -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-toggle" data-toggle="collapse" data-parent="#late1" href="#late2">
+                          + Possible Late Effects of Treatment - Any Cancer
+                        </a></h4>
+                      </div>
+                      <div id="late2" class="panel-body collapse">
+                        <div class="panel-inner">
+
+                          <!-- Here we insert another nested accordion -->
+
+                          <div class="panel-group" id="accordion4">
+			    <!-- E inserts -->
+				<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+
+                                  <i class="fa fa-star info"></i> Adverse Psychosocial/QoL Effects (Cancer Experience)
+
+                                </h4>
+                              </div>
+                            </div>
+				<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+
+                                  <i class="info"></i> Mental Health Issues
+                                </h4>
+                              </div>
+                            </div>
+				<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+
+                                  <i class="info"></i> Risky Behaviors
+
+                                </h4>
+                              </div>
+                            </div>
+				<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+
+                                  <i class="info"></i> Fatigue
+
+                                </h4>
+                              </div>
+                            </div>
+                            <div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+
+                                  <i class="fa fa-star info"></i> Limitations in Healthcare and Insurance Access
+
+                                </h4>
+                              </div>
+                            </div>
+				<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+
+                                  <i class="info"></i> Psychosocial Disability due to Pain
+                                </h4>
+                              </div>
+                            </div>
+				                        
+                          </div>  
+
+                          <!-- Inner accordion ends here -->
+
+                        </div>
+                      </div><!-- Panel body -->
+                    </div><!-- Panel -->
+                  </div><!-- Accordion -->
+
+                  <!--  Possible Late Effects 2 -->
+                    <div class="panel-group" id="well1">
+                    <!-- This Section contains nested items -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-toggle" data-toggle="collapse" data-parent="#well1" href="#well2">
+                          + Possible Late Effects of Treatment - Chemotherapy
+                        </a></h4>
+                      </div>
+                      <div id="well2" class="panel-body collapse">
+                        <div class="panel-inner">
+
+
+
+                          <!-- Here we insert another nested accordion -->
+			
+                            
+                          <div class="panel-group" id="accordion4">
+
+
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Dental Abnormalities
+                                </h4>
+                              </div>
+                            </div>
+                            <div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Gonadal Dysfunction (Ovarian)
+                                </h4>
+                              </div>
+                            </div>
+                            
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Gonadal Dysfunction (Testicular)
+                                </h4>
+                              </div>
+                            </div>
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 <i class="fa fa-star info"></i> Acute Myeloid Leukemia
+                                </h4>
+                              </div>
+                            </div>
+
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Pulmonary Fibrosis
+                                </h4>
+                              </div>
+                            </div>
+
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Bladder Malignancy
+                                </h4>
+                              </div>
+                            </div>
+
+
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Renal Toxicity
+                                </h4>
+                              </div>
+                            </div>
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Cardiac Toxicity
+                                </h4>
+                              </div>
+                            </div>
+
+
+
+                            
+                          </div>
+
+                          <!-- Inner accordion ends here -->
+
+                        </div>
+                      </div><!-- Panel body -->
+                    </div><!-- Panel -->
+                  </div><!-- Accordion -->
+
+
+
+
+
+
+
+
+            <!--  Possible Late Effects 3 -->
+                    <div class="panel-group" id="rad1">
+                    <!-- This Section contains nested items -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-toggle" data-toggle="collapse" data-parent="#rad1" href="#rad2">
+                          + Possible Late Effects of Treatment - Radiation
+                        </a></h4>
+                      </div>
+                      <div id="rad2" class="panel-body collapse">
+                        <div class="panel-inner">
+
+
+
+                          <!-- Here we insert another nested accordion -->
+			
+                            
+                          <div class="panel-group" id="accordion4">
+
+
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Craniofacial Abnormalities
+                                </h4>
+                              </div>
+                            </div>
+                            <div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Growth Hormone Deficiency
+                                </h4>
+                              </div>
+                            </div>
+                            
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Central Adrenal Insufficiency
+                                </h4>
+                              </div>
+                            </div>
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 <i class="info"></i> Ototoxicity
+                                </h4>
+                              </div>
+                            </div>
+
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Pulmonary Fibrosis
+                                </h4>
+                              </div>
+                            </div>
+
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Thyroid Cancer
+                                </h4>
+                              </div>
+                            </div>
+
+
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Breast Tissue Hypoplasia
+                                </h4>
+                              </div>
+                            </div>
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Breast Cancer
+                                </h4>
+                              </div>
+                            </div>
+
+
+
+                            
+                          </div>
+
+                          <!-- Inner accordion ends here -->
+
+                        </div>
+                      </div><!-- Panel body -->
+                    </div><!-- Panel -->
+                  </div><!-- Accordion -->
+
+
+
+
+
+		<!--  Wellness/Prevention -->
+                    <div class="panel-group" id="rad1">
+                    <!-- This Section contains nested items -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title"><a class="panel-toggle" data-toggle="collapse" data-parent="#prev1" href="#prev2">
+                          + General Health & Wellness/Prevention
+                        </a></h4>
+                      </div>
+                      <div id="prev2" class="panel-body collapse">
+                        <div class="panel-inner">
+
+
+
+                          <!-- Here we insert another nested accordion -->
+			
+                            
+                          <div class="panel-group" id="accordion4">
+
+
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Diet/Nutritional Counseling
+                                </h4>
+                              </div>
+                            </div>
+                            <div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Mental Health Screening
+                                </h4>
+                              </div>
+                            </div>
+                            
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="fa fa-star info"></i> Routine Vaccinations
+                                </h4>
+                              </div>
+                            </div>
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 <i class="info"></i> Breast Self-Exam
+                                </h4>
+                              </div>
+                            </div>
+
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Testicular Self-Exam
+                                </h4>
+                              </div>
+                            </div>
+
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Skin Self-Exam
+                                </h4>
+                              </div>
+                            </div>
+
+
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Tobacco Use Prevention Counseling
+                                </h4>
+                              </div>
+                            </div>
+
+			<div class="panel panel-default node" draggable="true" id="test">
+                              <div class="panel-heading">
+                                <h4 class="panel-title">
+                                  <i class="info"></i> Alcohol Use Prevention Counseling
+                                </h4>
+                              </div>
+                            </div>
+
+
+
+                            
+                          </div>
+
+                          <!-- Inner accordion ends here -->
+
+                        </div>
+                      </div><!-- Panel body -->
+                    </div><!-- Panel -->
+                  </div><!-- Accordion -->
+
+
+
+
+
+
+
+
+
+                </div><!-- Drag n drop -->
+              </div><!-- col-4 -->
+              <div class="col-lg-7 whitebk">
+                  <div class="careTop">
+                        <span class="txt14"><i class="fa fa-file-text-o"></i> Follow-up Care Plan</span> <br>
+                          <span class="txt12 btm5">
+                                          <i class="fa fa-circle blue"></i> Primary Cancer Follow-Up |
+                                          <i class="fa fa-circle pur"></i> Persistent Treatment Effects |
+                                          <i class="fa fa-circle org"></i> Possible Late Effects of Treatment |
+                                          <i class="fa fa-circle green"></i> Wellness/Prevention
+                                        </span>
+
+                  </div>
+                  <div class="clearfix"></div>
+                  <!-- Hiden form -->
+                  <div class="row btm80" id="planView">
+                    <ul class="nav nav-pills">
+                      <li class="active"><a href="#build" role="tab" data-toggle="tab">1. Choose Building Blocks</a></li>
+                      <li><a href="#input" role="tab" data-toggle="tab">2. Input Details</a></li>
+                      <li><a href="#review" role="tab" data-toggle="tab">3. Generate Plan</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content top20">
+                      <div class="tab-pane active" id="build">
+                        <div class="panel panel-default width50" id="planDrag">
+                          <div class="panel-body oneH">
+                            <div class="drop" id="droparea">
+                              <h4 class="grey"><i class="fa fa-arrow-down"></i> Drop items here to build plan</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="input">
+                        <div class="pull-right">
+                          <span class="pull-right dash-icons">
+                              <i class="fa fa-print"></i> 
+                              <i class="fa fa-envelope"></i>
+                              <i class="fa fa-save"></i>
+                          </span>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-6 txt12">
+                            <form role="form oneH">
+				<br>
+                              <label><i class="fa fa-circle blue"></i> Primary Cancer Follow-Up </label>
+                              <div class="form-group">
+                                <label for="name">Item Name</label>
+                                <input type="text" class="form-control input-sm" id="name" placeholder="" value="Survivorship Follow-Up Visit">
+                              </div>
+                              <div class="form-group">
+                                <label for="desc">Description</label>
+                                <input type="text" class="form-control input-sm" id="desc" placeholder="" value="Medical History and Physical (H&P) Examination">
+                              </div>
+                              <div class="form-group">
+                                <label for="provider">Provider</label>
+                                <input type="text" class="form-control input-sm" id="provider" placeholder="" value="Survivorship Clinic">
+                              </div>
+                              <div class="form-group">
+                                <label for="surv">Why?</label>
+                                <input type="text" class="form-control input-sm" id="surv" placeholder="" value="Cancer Surveillance">
+                              </div> 
+                              <div class="form-group">
+                                <label for="start">Start Date</label><small>&nbsp;&nbsp;&nbsp;&nbsp;Basis: Date Therapy Complete (01/03/2014) +2y </small>
+                                <input type="text" class="form-control input-sm" id="start" placeholder="" value="01/03/2016">
+                              </div>  
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 1</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+				      <option>+3 m</option>
+                                      <option selected>+4 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+				      <option>+3 m</option>
+                                      <option selected>+4 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+				      <option>+3 m</option>
+                                      <option selected>+4 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+				   </select>
+                                </div>
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 2</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option selected>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option selected>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 3</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                               <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                 <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select> 
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 4</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 5</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                               <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 6+</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              </form>
+                          </div>
+                         
+			
+			 <div class="col-xs-6 leftLine txt12">
+			    <label><i class="fa fa-circle pur"></i> Persistent Treatment Effects </label>
+                            <form role="form oneH">
+                              <div class="form-group">
+                                <label for="name">Item Name</label>
+                                <input type="text" class="form-control input-sm" id="name" placeholder="" value="Neurology Follow-Up">
+                              </div>
+                              <div class="form-group">
+                                <label for="desc">Description</label>
+                                <input type="text" class="form-control input-sm" id="desc" placeholder="" value="Peripheral Sensory Neuropathy">
+                              </div>
+                              <div class="form-group">
+                                <label for="provider">Provider</label>
+                                <input type="text" class="form-control input-sm" id="provider" placeholder="" value="Neurology">
+                              </div>
+                              <div class="form-group">
+                                <label for="surv">Why?</label>
+                                <input type="text" class="form-control input-sm" id="surv" placeholder="" value="Vinicristine (Chemotherapy)">
+                              </div> 
+                              <div class="form-group">
+                                <label for="start">Start Date</label><small>&nbsp;&nbsp;&nbsp;&nbsp;Basis: Onset (12/15/2014) </small>
+                                <input type="text" class="form-control input-sm" id="start" placeholder="" value="12/15/2014">
+                              </div>  
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 1</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 2</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                               <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 3</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                               <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 4</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 5</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 6+</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25"> 
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              </form>
+
+			 
+                          </div>
+
+                        </div> 
+		
+
+
+
+                        <div class="divide"></div>
+                        <div class="row">
+                        <div class="col-xs-6 txt12">
+                            <form role="form oneH">
+                              <label><i class="fa fa-circle pur"></i> Persistent Treatment Effects</label>
+                              <div class="form-group">
+                                <label for="name">Item Name</label>
+                                <input type="text" class="form-control input-sm" id="name" placeholder="" value="Endocrine Follow-Up">
+                              </div>
+                              <div class="form-group">
+                                <label for="desc">Description</label>
+                                <input type="text" class="form-control input-sm" id="desc" placeholder="" value="Hypothyroidism">
+                              </div>
+                              <div class="form-group">
+                                <label for="provider">Provider</label>
+                                <input type="text" class="form-control input-sm" id="provider" placeholder="" value="Endocrinology">
+                              </div>
+                              <div class="form-group">
+                                <label for="surv">Why?</label>
+                                <input type="text" class="form-control input-sm" id="surv" placeholder="" value="Cranial Radiation">
+                              </div> 
+                              <div class="form-group">
+                                <label for="start">Start Date</label><small>&nbsp;&nbsp;&nbsp;&nbsp;Basis: Onset (10/25/2013) </small>
+                                <input type="text" class="form-control input-sm" id="start" placeholder="" value="10/25/2013">
+                              </div>  
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 1</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 2</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 3</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 4</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 5</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 6+</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              </form>
+                          </div>
+                          <div class="col-xs-6 leftLine txt12">
+                            <form role="form oneH">
+				<label><i class="fa fa-circle org"></i> Possible Late Effects </label>
+                              <div class="form-group">
+                                <label for="name">Item Name</label>
+                                <input type="text" class="form-control input-sm" id="name" placeholder="" value="Cardiac Evaluation
+">
+                              </div>
+                              <div class="form-group">
+                                <label for="desc">Description</label>
+                                <input type="text" class="form-control input-sm" id="desc" placeholder="" value="2D Echo, EKG">
+                              </div>
+                              <div class="form-group">
+                                <label for="provider">Provider</label>
+                                <input type="text" class="form-control input-sm" id="provider" placeholder="" value="Cardiology">
+                              </div>
+                              <div class="form-group">
+                                <label for="surv">Why?</label>
+                                <input type="text" class="form-control input-sm" id="surv" placeholder="" value="Cardiac Toxicity (Anthracyclines-Daunorubicin) (Chemotherapy)">
+                              </div> 
+                              <div class="form-group">
+                                <label for="start">Start Date</label><small>&nbsp;&nbsp;&nbsp;&nbsp;Basis: Date Therapy Complete (01/03/2014) </small>
+                                <input type="text" class="form-control input-sm" id="start" placeholder="" value="01/03/2014">
+                              </div>  
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 1</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 2</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 3</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25"> 
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 4</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 5</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                               <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 6+</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              </form>
+                          </div>
+                        </div>
+                        <div class="divide"></div>
+                        <div class="row">
+                          <div class="col-xs-6 txt12">
+                            <label><i class="fa fa-circle green"></i> Wellness/Prevention</label>
+                            <form role="form oneH">
+                              
+                              <div class="form-group">
+                                <label for="name">Item Name</label>
+                                <input type="text" class="form-control input-sm" id="name" placeholder="" value="Routine Vaccinations">
+                              </div>
+                              <div class="form-group">
+                                <label for="desc">Description</label>
+                                <input type="text" class="form-control input-sm" id="desc" placeholder="" value="Chemotherapy Induced Loss of Protective Antibody Titers">
+                              </div>
+                              <div class="form-group">
+                                <label for="provider">Provider</label>
+                                <input type="text" class="form-control input-sm" id="provider" placeholder="" value="Pediatrician">
+                              </div>
+                              <div class="form-group">
+                                <label for="surv">Why?</label>
+                                <input type="text" class="form-control input-sm" id="surv" placeholder="" value="Vaccination per Standard Guidelines">
+                              </div> 
+                              <div class="form-group">
+                                <label for="start">Start Date</label><small>&nbsp;&nbsp;&nbsp;&nbsp;Basis: Date Therapy Complete (01/03/2014) </small>
+                                <input type="text" class="form-control input-sm" id="start" placeholder="" value="01/03/2014">
+                              </div>  
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 1</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 2</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                    </select>
+                                </div>
+                                <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 3</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                    </select>
+                                </div>
+                               <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 4</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                    </select>
+                                </div>
+                               <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 5</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                    </select>
+                                </div>
+                               <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              <div class="row">
+                              <div id="timeline1">
+                                <div class="col-xs-3">
+                                  <label>Year 6+</label>
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option selected>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                    </select>
+                                </div>
+                               <!-- <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option selected>+3 yr</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3 top25">
+                                    <select class="form-control input-sm">
+                                      <option>+1 m</option>
+                                      <option>+2 m</option>
+                                      <option>+3 m</option>
+                                      <option>+6 m</option>
+                                      <option>+1 yr</option>
+                                      <option>+2 yr</option>
+                                      <option>+3 yr</option>
+                                      <option>+4 yr</option>
+                                      <option>+5 yr</option>
+                                      <option>+6 yr and longer</option>
+                                    </select>
+                                </div> -->
+                              </div>
+                                <div class="col-xs-3 top30">
+                                    <a href="#" id="addtime" class="txt12">Add time</a>
+                                </div>
+                              </div>
+                              <!-- Year break -->
+                              </form>
+                          </div>
+                        
+                        </div>
+                        
+                      </div>
+                      <div class="tab-pane" id="review">
+                        <table class="table">
+                          <tr>
+                            <td><strong>Plan Item</strong></td>
+                            <td><strong>Dates</strong></td>
+			    <td><strong>Provider</strong></td>
+                          </tr>
+                          <tr>
+                            <td><i class="fa fa-circle blue"></i> Survivorship Follow-Up Visit</td>
+                            <td> Jan 2016, May 2016, Sept 2016, Jan 2017, July 2017, Jan 2018, Jan 2019, Jan 2020 </td>
+			    <td> <a href="careteam.html">Survivorship Clinic </a></td>
+                          </tr>
+                          <tr>
+                            <td><i class="fa fa-circle pur"></i> Neurology: Peripheral Sensory Neuropathy</td>
+                            <td>Dec 2014, Dec 2015, Dec 2016, Dec 2017, Dec 2018, Dec 2019, Dec 2020</td>
+			    <td> <a href="careteam.html">Neurology </a></td>
+                          </tr>
+                          <tr>
+                            <td><i class="fa fa-circle pur"></i> Endocrine: Hypothyroidism</td>
+                            <td>Oct 2013, Oct 2014, Oct 2015, Oct 2016, Oct 2017, Oct 2018, Oct 2019, Oct 2020</td>
+			    <td> <a href="careteam.html">Endocrinology</a></td>
+                          </tr>
+                          <tr>
+                            <td><i class="fa fa-circle orange"></i> Cardiovascular: Cardiac Toxcicity </td>
+                            <td>Jan 2014, Jan 2015, Jan 2016, Jan 2017, Jan 2018, Jan 2019, Jan 2020</td>
+			    <td> <a href="careteam.html">Cardiology </a></td>
+                          </tr>
+                          <tr>
+                            <td><i class="fa fa-circle green"></i> Pediatric Vaccinations </td>
+                            <td> Jan 2014, Jan 2015, Jan 2016, Jan 2017, Jan 2018, Jan 2019, Jan 2020 </td>
+			    <td> <a href="careteam.html">Pediatrician </a></td>
+                          </tr>
+
+                        </table>
+                      </div>
+                    </div>
+                  </div><!-- Row -->
+                </div>
+              </div>
+
+                                 
+    <!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
